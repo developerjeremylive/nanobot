@@ -24,6 +24,30 @@ Here are some examples of Nanobots in action:
 - [Hugging Face MCP](https://huggingface.nanobot.ai) [(config)](./examples/huggingface.yaml)
 - [Shopping/Shopify](https://shopping.nanobot.ai) [(config)](./examples/shopping.yaml)
 
+---
+
+## Getting Started
+
+### Windows Local Testing with GPT-3.5 Turbo
+
+To quickly test the project locally with GPT-3.5 Turbo, follow these steps:
+
+1. Set your OpenAI API key as an environment variable and run the application:
+
+   ```powershell
+   # Build the application
+   go build -o nanobot.exe
+   
+   # Set the listen address
+   $env:OPENAI_API_KEY="your-api-key-here"
+   $env:NANOBOT_RUN_LISTEN_ADDRESS="localhost:3000"
+   
+   # Run the application
+   .\nanobot.exe run
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000` to start using the application.
+
 ## Installation
 
 Nanobot can be installed via [Homebrew](https://brew.sh/):
@@ -33,10 +57,6 @@ brew install nanobot-ai/tap/nanobot
 ```
 
 This will give you the `nanobot` CLI, which you can use to run and manage your MCP host.
-
----
-
-## Getting Started
 
 ---
 
